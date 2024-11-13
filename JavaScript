@@ -1,0 +1,57 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all checklist columns
+    const checklists = [
+        { id: 'checklist1', tasks: ['task1', 'task2', 'task3'] },
+        { id: 'checklist2', tasks: ['task4', 'task5', 'task6'] },
+        { id: 'checklist3', tasks: ['task7', 'task8', 'task9', 'task10', 'task11', 'task12'] },
+        { id: 'checklist4', tasks: ['task13', 'task14', 'task15'] },
+        { id: 'checklist5', tasks: ['task16', 'task17'] },
+        { id: 'checklist6', tasks: ['task18', 'task19', 'task20', 'task21'] },
+        { id: 'checklist7', tasks: ['task22', 'task23'] }
+    ];
+
+    // Function to update item styles based on the checkbox state
+    function updateItemStyle(checkbox) {
+        const listItem = checkbox.parentElement;
+        if (checkbox.checked) {
+            listItem.classList.add('highlighted');
+        } else {
+            listItem.classList.remove('highlighted');
+        }
+    }
+
+    // Load checklist state from localStorage
+    function loadChecklistState(checklist) {
+        checklist.tasks.forEach(taskId => {
+            const checkbox = document.getElementById(taskId);
+            if (checkbox) {
+                const isChecked = localStorage.getItem(taskId) === 'true';
+                checkbox.checked = isChecked;
+                updateItemStyle(checkbox);
+            }
+        });
+    }
+
+    // Save checklist state to localStorage
+    function saveChecklistState(checklist) {
+        checklist.tasks.forEach(taskId => {
+            const checkbox = document.getElementById(taskId);
+            localStorage.setItem(taskId, checkbox.checked);
+        });
+    }
+
+    // Event listener to save state on checkbox change
+    checklists.forEach(checklist => {
+        checklist.tasks.forEach(taskId => {
+            const checkbox = document.getElementById(taskId);
+            if (checkbox) {
+                checkbox.addEventListener('change', function() {
+                    updateItemStyle(this);
+                    saveChecklistState(checklist); // Save state when changed
+                });
+            }
+        });
+    });
+
+    // Event listener for "Remove All" button
+    document.get
