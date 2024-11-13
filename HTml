@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Checklist</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Interactive Checklist - As a Critical Friend</h1>
+    <div class="container">
+        <!-- Column 1: Soups -->
+        <div class="column">
+            <h2>As a Critical Friend – Soups</h2>
+            <ul id="checklist1">
+                <li><input type="checkbox" id="task1"> <span>Suggest analyses</span></li>
+                <li><input type="checkbox" id="task2"> <span>Provoke reflection</span></li>
+                <li><input type="checkbox" id="task3"> <span>Provide study/organisation tips</span></li>
+            </ul>
+        </div>
+
+        <!-- Column 2: Entrees -->
+        <div class="column">
+            <h2>Getting Started – Entrees</h2>
+            <ul id="checklist2">
+                <li><input type="checkbox" id="task4"> <span>Suggesting structure</span></li>
+                <li><input type="checkbox" id="task5"> <span>Brainstorming ideas</span></li>
+                <li><input type="checkbox" id="task6"> <span>Engaging with literature</span></li>
+            </ul>
+        </div>
+
+        <!-- Column 3: Bread Service -->
+        <div class="column">
+            <h2>Engaging with Literature – Bread Service</h2>
+            <ul id="checklist3">
+                <li><input type="checkbox" id="task7"> <span>Suggesting search terms</span></li>
+                <li><input type="checkbox" id="task8"> <span>Performing searches</span></li>
+                <li><input type="checkbox" id="task9"> <span>Summarising literature</span></li>
+                <li><input type="checkbox" id="task10"> <span>Identifying methodologies</span></li>
+                <li><input type="checkbox" id="task11"> <span>Explaining jargon</span></li>
+                <li><input type="checkbox" id="task12"> <span>Fixing reference list</span></li>
+            </ul>
+        </div>
+
+        <!-- Column 4: Mains -->
+        <div class="column">
+            <h2>Generating Content – Mains</h2>
+            <ul id="checklist4">
+                <li><input type="checkbox" id="task13"> <span>Writing some text</span></li>
+                <li><input type="checkbox" id="task14"> <span>Making images, video, audio</span></li>
+                <li><input type="checkbox" id="task15"> <span>Making slidedecks</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Column 5: Lighter Mains -->
+        <div class="column">
+            <h2>Analyses – Lighter Mains</h2>
+            <ul id="checklist5">
+                <li><input type="checkbox" id="task16"> <span>Performing analyses of data, text</span></li>
+                <li><input type="checkbox" id="task17"> <span>Suggesting counterarguments</span></li>
+            </ul>
+        </div>
+
+        <!-- Column 6: Coffees -->
+        <div class="column">
+            <h2>Editing – Coffees</h2>
+            <ul id="checklist6">
+                <li><input type="checkbox" id="task18"> <span>Editing tone</span></li>
+                <li><input type="checkbox" id="task19"> <span>Improving clarity and readability</span></li>
+                <li><input type="checkbox" id="task20"> <span>Fixing grammar</span></li>
+                <li><input type="checkbox" id="task21"> <span>Shortening</span></li>
+            </ul>
+        </div>
+
+        <!-- Column 7: Desserts -->
+        <div class="column">
+            <h2>Feedback – Desserts</h2>
+            <ul id="checklist7">
+                <li><input type="checkbox" id="task22"> <span>On all of the above elements</span></li>
+                <li><input type="checkbox" id="task23"> <span>Specifically on rubric criteria</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <div style="text-align: center;">
+        <button id="removeAll" class="remove-all">Remove All</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
